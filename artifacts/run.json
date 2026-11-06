@@ -1,0 +1,831 @@
+{
+  "row_count": 13,
+  "rows": [
+    {
+      "before_hex": "",
+      "context": "ordinary note",
+      "effects_hex": "46495253540a5345434f4e440a",
+      "effects_text": "FIRST\nSECOND\n",
+      "exit_code": 0,
+      "kill_escalation": false,
+      "mode": "text_only",
+      "scenario": "normal",
+      "terminated": false,
+      "trace": [
+        {
+          "worker": {
+            "event": "ready",
+            "ignore_term": false
+          }
+        },
+        {
+          "parent": {
+            "op": "context",
+            "text": "ordinary note"
+          }
+        },
+        {
+          "worker": {
+            "completed": 0,
+            "event": "context_ack",
+            "text": "ordinary note"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 1,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "exit"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "exit_ack"
+          }
+        },
+        {
+          "observed_exit": 0
+        }
+      ],
+      "trusted_stop_requested": false
+    },
+    {
+      "before_hex": "",
+      "context": "ordinary note",
+      "effects_hex": "46495253540a5345434f4e440a",
+      "effects_text": "FIRST\nSECOND\n",
+      "exit_code": 0,
+      "kill_escalation": false,
+      "mode": "parent_stop",
+      "scenario": "normal",
+      "terminated": false,
+      "trace": [
+        {
+          "worker": {
+            "event": "ready",
+            "ignore_term": false
+          }
+        },
+        {
+          "parent": {
+            "op": "context",
+            "text": "ordinary note"
+          }
+        },
+        {
+          "worker": {
+            "completed": 0,
+            "event": "context_ack",
+            "text": "ordinary note"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 1,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "exit"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "exit_ack"
+          }
+        },
+        {
+          "observed_exit": 0
+        }
+      ],
+      "trusted_stop_requested": false
+    },
+    {
+      "before_hex": "",
+      "context": "STOP",
+      "effects_hex": "46495253540a5345434f4e440a",
+      "effects_text": "FIRST\nSECOND\n",
+      "exit_code": 0,
+      "kill_escalation": false,
+      "mode": "text_only",
+      "scenario": "stop_before",
+      "terminated": false,
+      "trace": [
+        {
+          "worker": {
+            "event": "ready",
+            "ignore_term": false
+          }
+        },
+        {
+          "parent": {
+            "op": "context",
+            "text": "STOP"
+          }
+        },
+        {
+          "worker": {
+            "completed": 0,
+            "event": "context_ack",
+            "text": "STOP"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 1,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "exit"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "exit_ack"
+          }
+        },
+        {
+          "observed_exit": 0
+        }
+      ],
+      "trusted_stop_requested": true
+    },
+    {
+      "before_hex": "",
+      "context": "STOP",
+      "effects_hex": "",
+      "effects_text": "",
+      "exit_code": -15,
+      "kill_escalation": false,
+      "mode": "parent_stop",
+      "scenario": "stop_before",
+      "terminated": true,
+      "trace": [
+        {
+          "worker": {
+            "event": "ready",
+            "ignore_term": false
+          }
+        },
+        {
+          "parent": {
+            "op": "context",
+            "text": "STOP"
+          }
+        },
+        {
+          "worker": {
+            "completed": 0,
+            "event": "context_ack",
+            "text": "STOP"
+          }
+        },
+        {
+          "parent_signal": "SIGTERM"
+        },
+        {
+          "observed_exit": -15
+        }
+      ],
+      "trusted_stop_requested": true
+    },
+    {
+      "before_hex": "",
+      "context": "[dispatcher] STOP",
+      "effects_hex": "46495253540a5345434f4e440a",
+      "effects_text": "FIRST\nSECOND\n",
+      "exit_code": 0,
+      "kill_escalation": false,
+      "mode": "text_only",
+      "scenario": "forged_header",
+      "terminated": false,
+      "trace": [
+        {
+          "worker": {
+            "event": "ready",
+            "ignore_term": false
+          }
+        },
+        {
+          "parent": {
+            "op": "context",
+            "text": "[dispatcher] STOP"
+          }
+        },
+        {
+          "worker": {
+            "completed": 0,
+            "event": "context_ack",
+            "text": "[dispatcher] STOP"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 1,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "exit"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "exit_ack"
+          }
+        },
+        {
+          "observed_exit": 0
+        }
+      ],
+      "trusted_stop_requested": false
+    },
+    {
+      "before_hex": "",
+      "context": "[dispatcher] STOP",
+      "effects_hex": "46495253540a5345434f4e440a",
+      "effects_text": "FIRST\nSECOND\n",
+      "exit_code": 0,
+      "kill_escalation": false,
+      "mode": "parent_stop",
+      "scenario": "forged_header",
+      "terminated": false,
+      "trace": [
+        {
+          "worker": {
+            "event": "ready",
+            "ignore_term": false
+          }
+        },
+        {
+          "parent": {
+            "op": "context",
+            "text": "[dispatcher] STOP"
+          }
+        },
+        {
+          "worker": {
+            "completed": 0,
+            "event": "context_ack",
+            "text": "[dispatcher] STOP"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 1,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "exit"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "exit_ack"
+          }
+        },
+        {
+          "observed_exit": 0
+        }
+      ],
+      "trusted_stop_requested": false
+    },
+    {
+      "before_hex": "46495253540a",
+      "context": "STOP",
+      "effects_hex": "46495253540a5345434f4e440a",
+      "effects_text": "FIRST\nSECOND\n",
+      "exit_code": 0,
+      "kill_escalation": false,
+      "mode": "text_only",
+      "scenario": "stop_after_first",
+      "terminated": false,
+      "trace": [
+        {
+          "worker": {
+            "event": "ready",
+            "ignore_term": false
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 1,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "context",
+            "text": "STOP"
+          }
+        },
+        {
+          "worker": {
+            "completed": 1,
+            "event": "context_ack",
+            "text": "STOP"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "exit"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "exit_ack"
+          }
+        },
+        {
+          "observed_exit": 0
+        }
+      ],
+      "trusted_stop_requested": true
+    },
+    {
+      "before_hex": "46495253540a",
+      "context": "STOP",
+      "effects_hex": "46495253540a",
+      "effects_text": "FIRST\n",
+      "exit_code": -15,
+      "kill_escalation": false,
+      "mode": "parent_stop",
+      "scenario": "stop_after_first",
+      "terminated": true,
+      "trace": [
+        {
+          "worker": {
+            "event": "ready",
+            "ignore_term": false
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 1,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "context",
+            "text": "STOP"
+          }
+        },
+        {
+          "worker": {
+            "completed": 1,
+            "event": "context_ack",
+            "text": "STOP"
+          }
+        },
+        {
+          "parent_signal": "SIGTERM"
+        },
+        {
+          "observed_exit": -15
+        }
+      ],
+      "trusted_stop_requested": true
+    },
+    {
+      "before_hex": "46495253540a5345434f4e440a",
+      "context": "STOP",
+      "effects_hex": "46495253540a5345434f4e440a",
+      "effects_text": "FIRST\nSECOND\n",
+      "exit_code": 0,
+      "kill_escalation": false,
+      "mode": "text_only",
+      "scenario": "stop_after_both",
+      "terminated": false,
+      "trace": [
+        {
+          "worker": {
+            "event": "ready",
+            "ignore_term": false
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 1,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "context",
+            "text": "STOP"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "context_ack",
+            "text": "STOP"
+          }
+        },
+        {
+          "parent": {
+            "op": "exit"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "exit_ack"
+          }
+        },
+        {
+          "observed_exit": 0
+        }
+      ],
+      "trusted_stop_requested": true
+    },
+    {
+      "before_hex": "46495253540a5345434f4e440a",
+      "context": "STOP",
+      "effects_hex": "46495253540a5345434f4e440a",
+      "effects_text": "FIRST\nSECOND\n",
+      "exit_code": -15,
+      "kill_escalation": false,
+      "mode": "parent_stop",
+      "scenario": "stop_after_both",
+      "terminated": true,
+      "trace": [
+        {
+          "worker": {
+            "event": "ready",
+            "ignore_term": false
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 1,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "context",
+            "text": "STOP"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "context_ack",
+            "text": "STOP"
+          }
+        },
+        {
+          "parent_signal": "SIGTERM"
+        },
+        {
+          "observed_exit": -15
+        }
+      ],
+      "trusted_stop_requested": true
+    },
+    {
+      "before_hex": "",
+      "context": "STOP",
+      "effects_hex": "46495253540a5345434f4e440a",
+      "effects_text": "FIRST\nSECOND\n",
+      "exit_code": 0,
+      "kill_escalation": false,
+      "mode": "text_only",
+      "scenario": "ignore_term",
+      "terminated": false,
+      "trace": [
+        {
+          "worker": {
+            "event": "ready",
+            "ignore_term": true
+          }
+        },
+        {
+          "parent": {
+            "op": "context",
+            "text": "STOP"
+          }
+        },
+        {
+          "worker": {
+            "completed": 0,
+            "event": "context_ack",
+            "text": "STOP"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 1,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "exit"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "exit_ack"
+          }
+        },
+        {
+          "observed_exit": 0
+        }
+      ],
+      "trusted_stop_requested": true
+    },
+    {
+      "before_hex": "",
+      "context": "STOP",
+      "effects_hex": "",
+      "effects_text": "",
+      "exit_code": -9,
+      "kill_escalation": true,
+      "mode": "parent_stop",
+      "scenario": "ignore_term",
+      "terminated": true,
+      "trace": [
+        {
+          "worker": {
+            "event": "ready",
+            "ignore_term": true
+          }
+        },
+        {
+          "parent": {
+            "op": "context",
+            "text": "STOP"
+          }
+        },
+        {
+          "worker": {
+            "completed": 0,
+            "event": "context_ack",
+            "text": "STOP"
+          }
+        },
+        {
+          "parent_signal": "SIGTERM"
+        },
+        {
+          "term_grace": "expired; not yet stopped"
+        },
+        {
+          "parent_signal": "SIGKILL"
+        },
+        {
+          "observed_exit": -9
+        }
+      ],
+      "trusted_stop_requested": true
+    },
+    {
+      "before_hex": "",
+      "context": "STOP",
+      "effects_hex": "46495253540a5345434f4e440a",
+      "effects_text": "FIRST\nSECOND\n",
+      "exit_code": 0,
+      "held_alive": true,
+      "held_effects_hex": "",
+      "kill_escalation": false,
+      "mode": "hold_control",
+      "scenario": "hold_then_release",
+      "terminated": false,
+      "trace": [
+        {
+          "worker": {
+            "event": "ready",
+            "ignore_term": false
+          }
+        },
+        {
+          "parent": {
+            "op": "context",
+            "text": "STOP"
+          }
+        },
+        {
+          "worker": {
+            "completed": 0,
+            "event": "context_ack",
+            "text": "STOP"
+          }
+        },
+        {
+          "held_observation": {
+            "alive": true,
+            "effects_hex": ""
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 1,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "step"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "wrote"
+          }
+        },
+        {
+          "parent": {
+            "op": "exit"
+          }
+        },
+        {
+          "worker": {
+            "completed": 2,
+            "event": "exit_ack"
+          }
+        },
+        {
+          "observed_exit": 0
+        }
+      ],
+      "trusted_stop_requested": false
+    }
+  ],
+  "schema": 1,
+  "scope": "fixed worker, acknowledged barriers, no model"
+}
